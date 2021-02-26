@@ -1,0 +1,66 @@
+.custom-modal {
+    align-items: center;
+    background-color: rgba( $primary, 0.9);
+    backdrop-filter: 5px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    
+
+
+    &__container {
+        border-radius: 5px;
+        display: flex;
+        background-color: white;
+        width: 60%;
+        color: $black-text;
+        -webkit-box-shadow: 2px 7px 48px 0px rgb(46, 104, 172);
+        -moz-box-shadow: 2px 7px 48px 0px rgb(46, 104, 172);
+        box-shadow: 2px 7px 48px 0px rgb(46, 104, 172);
+
+        &__img img{
+            height: 100%;
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem;
+            position: relative;
+            font-size: 1.2rem;
+            
+            h1 {
+                font-weight: 300;
+                font-size: 2.5rem;
+                color: $secondary;
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    justify-content: flex-start;
+                    margin-top: 1rem;
+                }
+            }
+
+            i {
+                color: lighten($color: $secondary, $amount: 10);
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Kohinoor Bangala';
+  src: url("../fonts/KohinoorBangla-Meidum.woff2");
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Kohinoor Bangala';
   src: url("../fonts/KohinoorBangla-Regular.woff2"); }
 
 @font-face {
   font-family: 'Kohinoor Bangala';
-  src: url("../fonts/KohinoorBangla-Medium.woff2");
-  font-weight: bold; }
-
-@font-face {
-  font-family: 'Kohinoor Bangala';
   src: url("../fonts/KohinoorBangla-Bold.woff2");
-  font-weight: bolder; }
+  font-weight: 500; }
 
 * {
   margin: 0;
@@ -24,9 +24,21 @@ html {
   scroll-behavior: smooth; }
 
 /*            Palete Colors               */
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 .container {
   display: grid;
   grid-template-rows: 100vh; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 .hero {
   background-image: linear-gradient(90deg, rgba(1, 30, 79, 0.8) 30%, rgba(255, 255, 255, 0.2) 100%), url(../img/background.jpg);
@@ -52,12 +64,14 @@ html {
       position: absolute;
       width: 30rem;
       top: -10rem;
-      left: -10rem; }
+      left: -10rem;
+      animation: spin 10s infinite; }
     .brand .gear-bottom {
       align-self: flex-end;
       position: absolute;
       width: 20rem;
-      bottom: -10rem; }
+      bottom: -10rem;
+      animation: spin 5s infinite reverse; }
 
 .contact {
   grid-column: start-contact / end-contact;
@@ -67,44 +81,132 @@ html {
 
 .contact__form {
   background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
-  width: 50%;
-  color: #1A1A1A; }
+  width: 50%; }
+  .contact__form h1 {
+    text-align: center;
+    color: #044c9e;
+    font-family: 'Kohinoor Bangala'; }
+  .contact__form > * {
+    font-family: 'Kohinoor Bangala'; }
   .contact__form input {
-    height: 2rem;
+    color: #0a0a0aaa;
     border-color: transparent;
     border-radius: 3px;
-    font-size: 1.2rem;
+    height: 2rem;
+    font-size: 1rem;
     padding: 0.5rem; }
+    .contact__form input:focus {
+      outline: none; }
   .contact__form button {
     align-self: flex-end;
     border-color: transparent;
     border-radius: 3px;
-    color: white;
+    color: #fafafa;
     background-color: #044c9e;
     height: 2rem;
     letter-spacing: 3px;
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 30%;
-    height: auto; }
+    height: auto;
+    transition: all 0.5s ease; }
+    .contact__form button:hover {
+      cursor: pointer;
+      background-color: #0670e8;
+      transform: scale(0.98); }
+  .contact__form label {
+    color: white; }
   .contact__form .message {
     border-color: transparent;
     border-radius: 3px;
-    font-size: 1.4rem;
-    padding: 0.5rem; }
+    color: #0a0a0aaa;
+    font-size: 1rem;
+    padding: 0.5rem;
+    resize: none; }
+    .contact__form .message:focus {
+      outline: none; }
 
 .group-input {
   display: flex;
   justify-content: space-between; }
 
 .group-input-vertical {
-  color: white;
   display: flex;
   flex-direction: column;
-  width: 45%; }
+  width: 45%;
+  gap: 1rem; }
+
+.float-button {
+  background-color: white;
+  border-radius: 50%;
+  border-color: transparent;
+  bottom: 50px;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 50px;
+  transition: all .5s ease; }
+  .float-button img {
+    width: 40px;
+    height: 40px; }
+  .float-button:hover {
+    cursor: pointer;
+    transform: scale(1.1); }
+  .float-button:focus {
+    outline: none; }
+
+.custom-modal {
+  align-items: center;
+  background-color: rgba(1, 30, 79, 0.9);
+  backdrop-filter: 5px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2; }
+  .custom-modal__container {
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+    width: 60%;
+    color: #0a0a0aaa;
+    -webkit-box-shadow: 2px 7px 48px 0px #2e68ac;
+    -moz-box-shadow: 2px 7px 48px 0px #2e68ac;
+    box-shadow: 2px 7px 48px 0px #2e68ac; }
+    .custom-modal__container__img img {
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+    .custom-modal__container__info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem;
+      position: relative;
+      font-size: 1.2rem; }
+      .custom-modal__container__info h1 {
+        font-weight: 300;
+        font-size: 2.5rem;
+        color: #03346C; }
+      .custom-modal__container__info ul {
+        list-style: none; }
+        .custom-modal__container__info ul li {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          justify-content: flex-start;
+          margin-top: 1rem; }
+      .custom-modal__container__info i {
+        color: #044c9e;
+        font-size: 2rem; }

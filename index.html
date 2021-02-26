@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <title>Servinorte</title>
     
 </head>
@@ -18,24 +19,54 @@
             </div>
             <div class="contact">
                 <form class="contact__form" action="#">
+                    <h1>CONTACTENOS</h1>
                     <div class="group-input">
 
                         <div class="group-input-vertical">
-                            <label for="name">NOMBRE</label>
+                            <label for="name"><i class="fa fa-user"></i> NOMBRE</label>
                             <input name="name" id="name" type="text" required>
                         </div>
 
                         <div class="group-input-vertical">
-                            <label for="email">EMAIL</label>
+                            <label for="email"><i class="fa fa-envelope"></i> EMAIL</label>
                             <input name="email" id="email" type="email" required>
                         </div>
 
                     </div>
+                    <label for="message"><i class="fa fa-envelope-open-text"></i> MENSAJE</label>
                     <textarea name="message" class="message" id="message" cols="30" rows="10"></textarea>
-                    <button type="submit">ENVIAR</button>
+                    <button type="submit"><i class="fa fa-paper-plane"></i> ENVIAR</button>
                 </form>
             </div>
         </div>
     </div>
+
+    <button class="float-button">
+        <img src="/img/marker.gif" alt="marker gift">
+    </button>
+
+    <div class="custom-modal">
+        <div class="custom-modal__container">
+            <div class="custom-modal__container__img">
+                <img src="img/map.png" alt="ubicacion servinorte">    
+            </div>
+            <div class="custom-modal__container__info">
+                <h1>NOS PUEDEN ENCONTRAR EN</h1>
+                <ul>
+                    <li>
+                        <i class="fa fa-map"></i>
+                        <p>AVENIDA INDEPENDENCIA 726 - SALTA CAPTIAL, ARGENTINA</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <p> (387) 620-4499</p>
+                    </li>
+                </ul>
+                
+            </div>
+            <a href="#">X</a>
+        </div>        
+    </div>
+
 </body>
 </html>
