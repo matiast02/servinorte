@@ -1,0 +1,22 @@
+@import '_fonts.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kohinoor Bangala', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*            Palete Colors               */
+$primary: #011E4F;
+$primary-light: #182E59;
+$secondary: #03346C;
+$dark: #1A1A1A; 

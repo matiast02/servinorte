@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Kohinoor Bangala';
+  src: url("../fonts/KohinoorBangla-Regular.woff2"); }
+
+@font-face {
+  font-family: 'Kohinoor Bangala';
+  src: url("../fonts/KohinoorBangla-Medium.woff2");
+  font-weight: bold; }
+
+@font-face {
+  font-family: 'Kohinoor Bangala';
+  src: url("../fonts/KohinoorBangla-Bold.woff2");
+  font-weight: bolder; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Kohinoor Bangala', sans-serif; }
+
+html {
+  scroll-behavior: smooth; }
+
+/*            Palete Colors               */
+.container {
+  display: grid;
+  grid-template-rows: 100vh; }
+
+.hero {
+  background-image: linear-gradient(90deg, rgba(1, 30, 79, 0.8) 30%, rgba(255, 255, 255, 0.2) 100%), url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: grid;
+  grid-template-columns: [start-brand] 50% [end-brand start-contact] 50% [end-contact]; }
+
+.brand {
+  grid-column: start-brand / end-brand;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; }
+  .brand__logo {
+    width: 50%; }
+  .brand .gear {
+    filter: invert(100%) sepia(0%) saturate(7481%) hue-rotate(351deg) brightness(107%) contrast(108%); }
+    .brand .gear-top {
+      position: absolute;
+      width: 30rem;
+      top: -10rem;
+      left: -10rem; }
+    .brand .gear-bottom {
+      align-self: flex-end;
+      position: absolute;
+      width: 20rem;
+      bottom: -10rem; }
+
+.contact {
+  grid-column: start-contact / end-contact;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.contact__form {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  width: 50%;
+  color: #1A1A1A; }
+  .contact__form input {
+    height: 2rem;
+    border-color: transparent;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    padding: 0.5rem; }
+  .contact__form button {
+    align-self: flex-end;
+    border-color: transparent;
+    border-radius: 3px;
+    color: white;
+    background-color: #044c9e;
+    height: 2rem;
+    letter-spacing: 3px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 30%;
+    height: auto; }
+  .contact__form .message {
+    border-color: transparent;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    padding: 0.5rem; }
+
+.group-input {
+  display: flex;
+  justify-content: space-between; }
+
+.group-input-vertical {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 45%; }

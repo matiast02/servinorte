@@ -1,0 +1,53 @@
+.hero {
+    
+    background-image:  linear-gradient(90deg, rgba(1,30,79, .8) 30%, rgba(255,255,255,0.2) 100%),
+    url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    display: grid;
+    grid-template-columns: [start-brand] 50% [end-brand start-contact] 50% [end-contact];
+
+}
+
+.brand {
+    grid-column: start-brand / end-brand;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    
+    &__logo {
+        width: 50%;
+    }
+
+    .gear {
+        filter: invert(100%) sepia(0%) saturate(7481%) hue-rotate(351deg) brightness(107%) contrast(108%);
+
+        &-top {
+            position: absolute;
+            width: 30rem;
+            top: -10rem;
+            left: -10rem;
+        }
+
+        &-bottom {
+            align-self: flex-end;
+            position: absolute;
+            width: 20rem;
+            bottom: -10rem;
+        }
+    }
+
+    
+    
+}
+
+.contact {
+    grid-column: start-contact / end-contact;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
